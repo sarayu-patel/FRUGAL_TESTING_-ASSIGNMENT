@@ -1,0 +1,113 @@
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Intelligent Registration System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Register — Intelligent Registration System</h1>
+
+    <div id="form-messages" class="messages" aria-live="polite"><div class="successTop" style="font-size: 18px; border: 3px solid rgb(39, 174, 96); background: rgb(233, 249, 239); padding: 8px;">Registration Successful! Your profile has been submitted successfully.</div></div>
+
+    <form id="regForm" novalidate="">
+      <div class="grid">
+        <div class="field">
+          <label for="firstName">First Name *</label>
+          <input id="firstName" name="firstName" required="" class="">
+          <small class="error" data-for="firstName"></small>
+        </div>
+
+        <div class="field">
+          <label for="lastName">Last Name *</label>
+          <input id="lastName" name="lastName" required="" class="">
+          <small class="error" data-for="lastName" style="border: 3px solid rgb(231, 76, 60); background: rgb(255, 243, 243); padding: 6px;"></small>
+        </div>
+
+        <div class="field">
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" required="" class="">
+          <small class="error" data-for="email"></small>
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone Number *</label>
+          <input id="phone" name="phone" class="">
+          <small class="error" data-for="phone"></small>
+        </div>
+
+        <div class="field">
+          <label for="age">Age</label>
+          <input id="age" name="age" type="number" min="0" max="150">
+        </div>
+
+        <div class="field">
+          <label>Gender *</label>
+          <div class="radios">
+            <label><input type="radio" name="gender" value="Male" required=""> Male</label>
+            <label><input type="radio" name="gender" value="Female"> Female</label>
+            <label><input type="radio" name="gender" value="Other"> Other</label>
+          </div>
+          <small class="error" data-for="gender"></small>
+        </div>
+
+        <div class="field">
+          <label for="address">Address</label>
+          <textarea id="address" name="address" rows="2"></textarea>
+        </div>
+
+        <div class="field">
+          <label for="country">Country *</label>
+          <select id="country" required="">
+            <option value="">Select Country</option>
+            <option value="IN">India</option>
+            <option value="US">United States</option>
+            <option value="GB">United Kingdom</option>
+            <option value="AU">Australia</option>
+          </select>
+          <small class="error" data-for="country"></small>
+        </div>
+
+        <div class="field">
+          <label for="state">State *</label>
+          <select id="state" required=""><option value="">Select State</option><option value="Maharashtra">Maharashtra</option><option value="Karnataka">Karnataka</option></select>
+          <small class="error" data-for="state"></small>
+        </div>
+
+        <div class="field">
+          <label for="city">City *</label>
+          <select id="city" required=""><option value="">Select City</option><option value="Mumbai">Mumbai</option><option value="Pune">Pune</option><option value="Nagpur">Nagpur</option></select>
+          <small class="error" data-for="city"></small>
+        </div>
+
+        <div class="field">
+          <label for="password">Password *</label>
+          <input id="password" name="password" type="password" required="" class="">
+          <meter id="pwMeter" min="0" max="4" low="2" high="3" optimum="4" value="4"></meter>
+          <small id="pwStrength">Strength: Strong</small>
+          <small class="error" data-for="password"></small>
+        </div>
+
+        <div class="field">
+          <label for="confirmPassword">Confirm Password *</label>
+          <input id="confirmPassword" type="password" required="" class="">
+          <small class="error" data-for="confirmPassword"></small>
+        </div>
+
+        <div class="field checkbox-field">
+          <label><input id="terms" type="checkbox" required="" class="invalid"> I accept Terms &amp; Conditions *</label>
+          <small class="error" data-for="terms">You must accept terms</small>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="submitBtn" type="submit" style="opacity: 1;">Register</button>
+        <button id="resetBtn" type="button" class="secondary">Reset</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+
+
+</body></html>
